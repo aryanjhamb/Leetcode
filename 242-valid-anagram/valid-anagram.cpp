@@ -12,9 +12,12 @@ public:
         }
         for (char ch : t) {
             freqMap1[ch]--;
-             if (freqMap1[ch] < 0) return false;
         }
-        return true;
-  
+         for (auto it : freqMap1) {
+        if (it.second != 0) return false;  
+
+    
+    }
+    return true;
     }
 };
