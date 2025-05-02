@@ -4,14 +4,16 @@ public:
         int n = strs.size();
         string ans = "";
         sort(strs.begin(),strs.end());
-        string start = strs[0];
-        string end =  strs[n-1]; 
-        for(int i = 0 ; i < min(start.length(),end.length()) ; i++)
+        string first = strs[0];
+        string last  =strs[n-1]; 
+        for(int i =  0;  i< min(first.length(),last.length()); i++)
         {
-            if(start[i]!=end[i])
+            if(first[i]!=last[i])
             return ans;
-            ans =ans + start[i];
+            ans = ans + first[i];
+
         }
         return ans;
+        
     }
 };
